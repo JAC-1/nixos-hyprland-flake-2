@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-users.users.jac-1 = {
+users.users.justin = {
      isNormalUser = true;
      shell = pkgs.zsh;
      extraGroups = [

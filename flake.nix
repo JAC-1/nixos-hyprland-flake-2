@@ -39,7 +39,7 @@
         };
 
 		homeConfigurations = {
-			jac-1 = home-manager.lib.homeManagerConfiguration {
+			justin = home-manager.lib.homeManagerConfiguration {
 				inherit pkgs;
 				modules = [ ./home ];
                 extraSpecialArgs = {
