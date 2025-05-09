@@ -12,11 +12,11 @@
         #     inputs.nixpkgs.follows = "nixpkgs";
         # };
 
-        lanzaboote = {
-            url = "github:nix-community/lanzaboote/v0.3.0";
+        # lanzaboote = {
+        #     url = "github:nix-community/lanzaboote/v0.3.0";
 
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
+        #     inputs.nixpkgs.follows = "nixpkgs";
+        # };
     };
 
     outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, lanzaboote, ... }@inputs:
@@ -27,7 +27,7 @@
         pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
 	in
     {
-		nixosConfigurations.nixnix = lib.nixosSystem {
+		nixosConfigurations.nix = lib.nixosSystem {
                 inherit system;
 				modules = [
                     ./system/configuration.nix
@@ -39,7 +39,7 @@
         };
 
 		homeConfigurations = {
-			justin = home-manager.lib.homeManagerConfiguration {
+			jac-1 = home-manager.lib.homeManagerConfiguration {
 				inherit pkgs;
 				modules = [ ./home ];
                 extraSpecialArgs = {

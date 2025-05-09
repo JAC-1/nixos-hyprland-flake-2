@@ -27,7 +27,7 @@ in
             source ~/.p10k.zsh &&
             eval "$(zoxide init --cmd cd zsh)" &&
 
-            export PATH="$PATH:/home/justin/.dotnet/tools"
+            export PATH="$PATH:/home/jac-1/.dotnet/tools"
         '';
 		shellAliases = myAliases;
 		oh-my-zsh = {
