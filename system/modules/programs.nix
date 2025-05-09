@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: 
+{ config, pkgs, ... }:
 
 {
 
@@ -13,7 +13,7 @@
  };
 
  programs = {
-	steam = { 
+	steam = {
 		enable = true;
 		remotePlay.openFirewall = true;
 		dedicatedServer.openFirewall = true;
@@ -39,7 +39,7 @@
     tmux = {
         enable = true;
         escapeTime = 0;
-        
+
         plugins = with pkgs; [
             tmuxPlugins.vim-tmux-navigator
             tmuxPlugins.resurrect
