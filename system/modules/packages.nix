@@ -3,7 +3,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    zed-editor
+    # zed-editor
     fcitx5
     fcitx5-configtool
     fcitx5-mozc
