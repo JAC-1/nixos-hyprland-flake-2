@@ -21,7 +21,6 @@ in
   programs = {
 	zsh = {
 		enable = true;
-		autosuggestions.enable = true;
 		syntaxHighlighting.enable = true;
 		initExtra = ''
             source ~/.p10k.zsh &&

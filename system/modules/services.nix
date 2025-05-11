@@ -4,7 +4,7 @@
   services = {
   	dbus.enable = true;
 	picom.enable = true;
-	openssh.enable = true;
+	openssh.enable = false;
     spice-vdagentd.enable = true;
 
 	xserver = {
@@ -12,10 +12,10 @@
 		layout = "jp";
         # xkbOptions = "grp:alt_shift_toggle, caps:swapescape";
 
-		displayManager = {
-			sddm.enable = true;
-            sddm.theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
-		};
+		# displayManager = {
+		# 	sddm.enable = true;
+		#           sddm.theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
+		# };
 	};
   };
 }

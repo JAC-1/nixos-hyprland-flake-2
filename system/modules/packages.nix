@@ -3,7 +3,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    # zed-editor
+    gh
     fcitx5
     fcitx5-configtool
     fcitx5-mozc
@@ -32,5 +32,6 @@
     xdg-desktop-portal-wlr
     zip
     zoxide
+    home-manager
   ];
 }
