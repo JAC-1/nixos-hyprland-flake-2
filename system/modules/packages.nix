@@ -33,5 +33,6 @@
     zip
     zoxide
     home-manager
+    hyprshot
   ];
 }

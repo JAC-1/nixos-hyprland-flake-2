@@ -1,2 +1,1 @@
-require("gpskwlkr.core")
-require("gpskwlkr.lazy")
+require("config.lazy")
