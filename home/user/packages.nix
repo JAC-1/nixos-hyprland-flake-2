@@ -4,6 +4,8 @@
   home.packages = [
 
     # Dev
+    pkg.zed
+    pkg.gcc
 
     # Notes
     pkgs.obsidian

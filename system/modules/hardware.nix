@@ -5,12 +5,12 @@
  hardware = {
     bluetooth.enable = true;
 
-    # Enable IOMMU
-    enableAllFirmware = true;
-    ace.enable = true;
-
-    # CPU hardware options
-    cpu.intel.updateMicrocode = true;
+    # # Enable IOMMU
+    # enableAllFirmware = true;
+    # ace.enable = true;
+    #
+    # # CPU hardware options
+    # cpu.intel.updateMicrocode = true;
 
  # Nvidia?
 #   hardware.nvidia = {

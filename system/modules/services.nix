@@ -12,10 +12,10 @@
 		layout = "jp";
         # xkbOptions = "grp:alt_shift_toggle, caps:swapescape";
 
-		# displayManager = {
-		# 	sddm.enable = true;
-		#           sddm.theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
-		# };
+		displayManager = {
+			sddm.enable = true;
+		          sddm.theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
+		};
 	};
   };
 }
