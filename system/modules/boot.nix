@@ -1,7 +1,6 @@
 { config, pkgs, lib, ... }:
 
 {
- # Switched to lanzaboote Secure Boot
   boot = {
 	kernelParams = ["nohibernate" "ipv6.disable=1"];
 	tmp.cleanOnBoot = true;
