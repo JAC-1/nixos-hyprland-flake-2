@@ -7,19 +7,9 @@
         home-manager.url = "github:nix-community/home-manager/release-24.11";
         home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-        # firefox-addons = {
-        #     url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-        #     inputs.nixpkgs.follows = "nixpkgs";
-        # };
-
-         lanzaboote = {
-             url = "github:nix-community/lanzaboote/v0.3.0";
-
-             inputs.nixpkgs.follows = "nixpkgs";
-         };
     };
 
-    outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, lanzaboote, ... }@inputs:
+    outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:
 	let
 	    lib = nixpkgs.lib;
 	    system = "x86_64-linux";
@@ -29,13 +19,10 @@
     {
 		nixosConfigurations.nixnix = lib.nixosSystem {
                 inherit system;
-				modules = [
-                    ./system/configuration.nix
-                    # lanzaboote.nixosModules.lanzaboote
-				];
-                specialArgs = {
-                    inherit pkgs-unstable;
-                };
+				modules = [ ./system/configuration.nix];
+        specialArgs = {
+            inherit pkgs-unstable;
+        };
         };
 
 		homeConfigurations = {

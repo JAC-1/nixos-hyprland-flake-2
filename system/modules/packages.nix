@@ -3,6 +3,8 @@
 
 {
   environment.systemPackages = with pkgs; [
+    adwaita-icon-theme # default gnome cursors
+    lazygit
     gh
     fcitx5
     fcitx5-configtool

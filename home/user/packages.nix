@@ -1,17 +1,23 @@
 { pkgs, pkgs-unstable, ... }:
 
 {
-  home.packages = [
+  home.packages = with pkgs; [
 
-    # Dev
-    pkg.zed
-    pkg.gcc
+    # Dev and nvim
+    zig
+    gcc
+    python3
+    luarocks
+    fd
+    nodejs_23
+    # pdflatex
+    # mmdc
 
     # Notes
-    pkgs.obsidian
+    obsidian
 
     # Bluetooth
-    pkgs.blueberry
+    blueberry
 
    # Gaming
     # pkgs.steam
@@ -28,10 +34,10 @@
     # pkgs.qbittorrent
 
     # Utils
-    pkgs.viewnior
-    pkgs-unstable.hyprshot
-    pkgs.catppuccin-cursors.macchiatoBlue
-    pkgs.catppuccin-gtk
-    pkgs.papirus-folders
+    viewnior
+    hyprshot
+    catppuccin-cursors.macchiatoBlue
+    catppuccin-gtk
+    papirus-folders
   ];
 }

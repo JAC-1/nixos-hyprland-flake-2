@@ -7,15 +7,14 @@
 	openssh.enable = false;
     spice-vdagentd.enable = true;
 
+  displayManager = {
+    sddm.theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
+    sddm.enable = true; 
+  };
+
 	xserver = {
 		enable = true;
-		layout = "jp";
-        # xkbOptions = "grp:alt_shift_toggle, caps:swapescape";
-
-		displayManager = {
-			sddm.enable = true;
-		          sddm.theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
-		};
-	};
+		xkb.layout = "jp";
+  };
   };
 }
